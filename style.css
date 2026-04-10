@@ -6,7 +6,7 @@
 
 
 .card {
-    background-color: chocolate;
+   background-color: green;
    margin: 24px auto;
    padding-right: 24px;
    border: 1px solid brown;
@@ -17,7 +17,7 @@
    align-items: center;
    gap: 24px;
 
-    width: 300px;
+    width: 400px;
    /* max-width: fit-content; */
 }
 

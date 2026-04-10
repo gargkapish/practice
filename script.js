@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  function main(arr) {
@@ -5,6 +6,13 @@
         const newCard = document.createElement("div");
         newCard.className = "card";
         newCard.innerHTML = `
+=======
+function main(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const newCard = document.createElement("div");
+    newCard.className = "card";
+    newCard.innerHTML = `
+>>>>>>> origin
         <img src="${arr[i].thumbnail}" />
         <div class="product-info">
             <h4> ${arr[i].title} </h4>
@@ -12,6 +20,7 @@
             <p>Rating: ${arr[i].rating} ⭐️</p>
         </div>
     `;
+<<<<<<< HEAD
         const root = document.getElementById("root");
         root.appendChild(newCard);
     }
@@ -29,3 +38,21 @@
  }
  
  getData();
+=======
+    const root = document.getElementById("root");
+    root.appendChild(newCard);
+  }
+}
+
+async function getData() {
+  const URL =
+    "https://dummyjson.com/products?select=title,price,rating,thumbnail";
+  const response = await fetch(URL);
+  const data = await response.json();
+  console.log(data);
+
+  main(data.products);
+}
+
+getData();
+>>>>>>> origin
